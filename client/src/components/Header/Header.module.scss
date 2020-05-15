@@ -1,0 +1,52 @@
+.header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 60px;
+  min-height: 210px;
+  @media only screen and (max-width: 700px) {
+    &.firstPage{
+      min-height: 120px;
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    min-height: 180px;
+  }
+
+  &.firstPage{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo{
+    max-width: 220px;
+    margin-top: 50px;
+    min-width: 170px;
+    @media only screen and (max-width: 580px) {
+      max-width: 180px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+
+  .cat{
+    margin-right: -40px;
+    &.firstPage{
+      max-width: 420px;
+      margin-top: 30px;
+      margin-left: -90px;
+    }
+
+    @media only screen and (max-width: 580px) {
+      &:not(.firsPage){
+        display: none;
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+    display: block;
+  }
+}
